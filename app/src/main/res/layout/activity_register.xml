@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity" >
+    tools:context=".register.register_Activity">
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +16,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:text="Walcome Back!"
+        android:text="Create Account!"
         android:textSize="30dp"
         android:textStyle="bold"
         android:backgroundTint="@color/buttoncolor"
@@ -30,21 +30,21 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Enter your emali and passsword to conntinue"
+        android:text="Sign Up to continue"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/edt_email_login"
+        android:id="@+id/edt_name_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/rounded_edittext"
-        android:drawableLeft="@drawable/ic_email"
+        android:drawableLeft="@drawable/ic_name"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Enter your email address"
+        android:hint="Enter your name"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
@@ -52,7 +52,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/edt_password_login"
+        android:id="@+id/edt_email_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Enter your email address"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name_register"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_register"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_register" />
+
+    <EditText
+        android:id="@+id/edt_password_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
@@ -63,36 +79,42 @@
         android:paddingLeft="20dp"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/edt_email_login"
-        app:layout_constraintStart_toStartOf="@+id/edt_email_login"
-        app:layout_constraintTop_toBottomOf="@+id/edt_email_login" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_email_register"
+        app:layout_constraintStart_toStartOf="@+id/edt_email_register"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email_register" />
 
-    <TextView
-        android:id="@+id/txv_forgot_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Forgot password?"
-        android:textColor="@color/buttoncolor"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edt_password_login"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password_login" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_login"
+    <EditText
+        android:id="@+id/edt_confirmpassword_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password_register"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_password_register"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password_register" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="204dp"
         android:backgroundTint="#001CB6"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edt_password_login"
-        app:layout_constraintStart_toStartOf="@+id/edt_password_login"
-        app:layout_constraintTop_toBottomOf="@+id/txv_forgot_password"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_confirmpassword_register"
+        app:layout_constraintStart_toStartOf="@+id/edt_confirmpassword_register"
+        app:layout_constraintTop_toBottomOf="@+id/edt_confirmpassword_register" />
 
     <View
         android:id="@+id/line1_login"
@@ -100,16 +122,16 @@
         android:layout_height="2dp"
         android:layout_marginTop="32dp"
         android:background="@color/grey"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintStart_toStartOf="@+id/button_register"
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
     <View
         android:id="@+id/line2_login"
         android:layout_width="100dp"
         android:layout_height="2dp"
         android:layout_marginTop="32dp"
         android:background="@color/grey"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintEnd_toEndOf="@+id/button_register"
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
 
     <TextView
         android:id="@+id/textView4"
@@ -117,18 +139,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:gravity="center"
-        android:text="Or sign in whith"
+        android:text="Or sign up whith"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
 
     <LinearLayout
-        android:id="@+id/sosmed_google_login"
+        android:id="@+id/sosmed_google_register"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_edittext"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/button_register"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ImageView
@@ -148,12 +170,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/sosmed_facebook_login"
+        android:id="@+id/sosmed_facebook_register"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_edittext"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/button_register"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ImageView
@@ -179,11 +201,11 @@
         android:layout_marginTop="35dp"
         android:layout_marginLeft="70dp"
         android:text="Don't have an account?"
-        app:layout_constraintStart_toStartOf="@+id/sosmed_google_login"
-        app:layout_constraintTop_toBottomOf="@+id/sosmed_google_login" />"
+        app:layout_constraintStart_toStartOf="@+id/sosmed_google_register"
+        app:layout_constraintTop_toBottomOf="@+id/sosmed_google_register" />"
 
     <TextView
-        android:id="@+id/txv_register"
+        android:id="@+id/txv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -191,9 +213,6 @@
         android:text="Register"
         android:textColor="@color/buttoncolor"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_login" />
-
+        app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
