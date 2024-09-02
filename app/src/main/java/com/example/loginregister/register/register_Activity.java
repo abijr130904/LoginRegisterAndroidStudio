@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,6 +21,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.DatabaseReference;
+
+
 
 public class register_Activity extends AppCompatActivity {
     EditText  inputemail, inputpassword, inputconfirmpassword;
@@ -28,10 +32,12 @@ public class register_Activity extends AppCompatActivity {
     Button btnregister;
     FirebaseAuth mAuth;
 
+    private DatabaseReference database;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -41,6 +47,7 @@ public class register_Activity extends AppCompatActivity {
         });
 
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://loginregister-39e31-default-rtdb.firebaseio.com/");
 
         inputemail = findViewById(R.id.edt_email_register);
         inputpassword = findViewById(R.id.edt_password_register);
