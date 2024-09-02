@@ -36,26 +36,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/edt_name_register"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_edittext"
-        android:drawableLeft="@drawable/ic_name"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Enter your name"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
         android:id="@+id/edt_email_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/rounded_edittext"
         android:drawableLeft="@drawable/ic_email"
         android:drawablePadding="10dp"
@@ -63,9 +47,9 @@
         android:hint="Enter your email address"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/edt_name_register"
-        app:layout_constraintStart_toStartOf="@+id/edt_name_register"
-        app:layout_constraintTop_toBottomOf="@+id/edt_name_register" />
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/edt_password_register"
@@ -106,7 +90,6 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="204dp"
         android:backgroundTint="#001CB6"
         android:text="Sign Up"
         android:textSize="20dp"
@@ -114,7 +97,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/edt_confirmpassword_register"
         app:layout_constraintStart_toStartOf="@+id/edt_confirmpassword_register"
-        app:layout_constraintTop_toBottomOf="@+id/edt_confirmpassword_register" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_confirmpassword_register"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/line1_login"
@@ -204,15 +188,15 @@
         app:layout_constraintStart_toStartOf="@+id/sosmed_google_register"
         app:layout_constraintTop_toBottomOf="@+id/sosmed_google_register" />"
 
-    <TextView
-        android:id="@+id/txv_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="35dp"
-        android:text="Register"
-        android:textColor="@color/buttoncolor"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_register" />
+        <TextView
+            android:id="@+id/txv_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="35dp"
+            android:text="Sign In"
+            android:textColor="@color/buttoncolor"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -183,12 +183,12 @@
         app:layout_constraintTop_toBottomOf="@+id/sosmed_google_login" />"
 
     <TextView
-        android:id="@+id/txv_register"
+        android:id="@+id/txv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="35dp"
-        android:text="Register"
+        android:text="Sign Up"
         android:textColor="@color/buttoncolor"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_login" />
